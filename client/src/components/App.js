@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import Header from './Header';
+import Landing from './Landing';
 
 const Dashboard = () => <h2>Dashboard</h2>;
 const SurveyNew = () => <h2>Servey New</h2>;
-const Landing = () => <h2>Landing</h2>;
 
 class App extends Component {
     componentDidMount() {
-        console.log('componfent did mount')
+        console.log('componfent did mount');
         this.props.fetchUser();
     }
     render() {
@@ -21,7 +21,7 @@ class App extends Component {
                     <div>
                         <Header />
                         <Route exact path="/" component={Landing} />
-                        <Route exact path="/servays" component={Dashboard} />
+                        <Route exact path="/surveys" component={Dashboard} />
                         <Route path="/servays/new" component={SurveyNew} />
                     </div>
                 </BrowserRouter>
