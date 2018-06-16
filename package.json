@@ -7,14 +7,15 @@
         "node": "8.1.1",
         "npm": "5.0.3"
     },
-    
     "scripts": {
         "start": "node index.js",
         "server": "nodemon index.js",
         "client": "npm run start --prefix client",
         "dev": "concurrently \"npm run server\" \"npm run client \"",
-         "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
-    "author": "",
+        "heroku-postbuild":
+            "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    },
+    "author": "Polina Zolotukhina",
     "license": "ISC",
     "dependencies": {
         "body-parser": "^1.18.3",
